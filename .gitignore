@@ -7,3 +7,6 @@ doc/*.html
 doc/*.png
 doc/*.css
 doc/edoc-info
+.rebar3
+_build
+TEST-file*

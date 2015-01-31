@@ -2,25 +2,25 @@ CWD=$(shell pwd)
 NAME=$(shell basename ${CWD})
 
 all: clean compile edoc release
-	./rebar compile
+	./rebar3 compile
 
 edoc:
 	./rebar doc
 
 compile:
-	./rebar compile
+	./rebar3 compile
 
 test: compile
-	./rebar eunit skip_deps=true
+	./rebar3 eunit skip_deps=true
 
 release: test
 	(cd rel && ../rebar generate && cd -)
 
 node:
-	(cd rel && ../rebar create-node nodeid=${NAME} && cd -)
+	(cd rel && ../rebar3 create-node nodeid=${NAME} && cd -)
 
 clean:
-	./rebar clean
+	./rebar3 clean
 	rm -rf rel/${NAME}
 
 run:
