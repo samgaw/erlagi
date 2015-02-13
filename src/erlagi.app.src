@@ -2,7 +2,7 @@
     {description, "Asterisk Gateway Interface (AGI) client for erlang/otp"},
     {vsn, git},
     {registered, []},
-    {applications, [kernel, stdlib, sasl]},
+    {applications, [kernel, stdlib]},
     {mod, { erlagi_app, []}},
     {env, []}
  ]}.
